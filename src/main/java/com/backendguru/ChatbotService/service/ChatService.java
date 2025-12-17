@@ -30,7 +30,7 @@ public class ChatService {
     public String orderReturnProcess(String prompt) {
         String system = """
                 Görevin: mevcut MCP araçlarını kullanarak kullanıcının talebi olan siparişi iade etme sürecini başlatan akışı oluştur
-                {format}
+         
                 """;
 
         String user = "Kullanıcının iade etmek istediği sipariş detayı:" + prompt;
@@ -69,6 +69,7 @@ public class ChatService {
     }
 
     public ReturnOrderProcessResponseDto orderReturnProcessReturnTrueWithoutConverter(String promptStr) {
+
         String system = """
             Görevin: mevcut MCP araçlarını kullanarak kullanıcının talebi olan siparişi iade etme sürecini başlatan akışı oluştur.
             """;
@@ -114,6 +115,7 @@ public class ChatService {
                 .content();
         System.out.println("sonuç alındı");
         return content;
+
     }
 
 
@@ -135,5 +137,6 @@ public class ChatService {
                 .content();
         System.out.println("sonuç alındı");
         return content;
+
     }
 }

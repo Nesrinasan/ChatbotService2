@@ -17,7 +17,7 @@ public class ToolCallingController {
         this.chatModel = chatModel;
     }
 
-    @GetMapping("/noToolCalling/currentTime")
+    @GetMapping("/currentTime")
     public String noToolCallingCurrentTime(){
 
         return ChatClient.create(chatModel)
